@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-commerce Customer Analysis Report</title>
+    <link rel="stylesheet" href="assets/bc.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/plotly.js/2.27.1/plotly.min.js"></script>
+</head>
+<body>
+<nav class="navbar">
+    <div class="nav-brand">E-commerce Analysis</div>
+    <button class="nav-toggle" aria-label="Toggle navigation">
+        <span></span>
+    </button>
+    <ul class="nav-menu">
+        <li><a href="#executive-summary">Executive Summary</a></li>
+        <li><a href="#key-insights">Key Insights</a></li>
+        <li><a href="#predictive-models">Predictive Models</a></li>
+        <li><a href="#recommendations">Recommendations</a></li>
+        <li><a href="#timeline">Timeline</a></li>
+        <li><a href="predictive_models.html">Understanding of Models</a></li>
+    </ul>
+</nav>
+
+<main>
+    <header class="hero">
+        <h1>E-commerce Customer Analysis Report</h1>
+        <p>Data Analytics Report for Business Optimization</p>
+    </header>
+
+    <section id="executive-summary" class="content-section">
+        <h2>Executive Summary</h2>
+        <p>This report presents key findings from the analysis of customer data, including purchase behaviors, demographics, and predictive modeling insights. The analysis aims to provide actionable recommendations for improving business performance and customer satisfaction.</p>
+    </section>
+
+    <section id="key-insights" class="content-section">
+        <h2>1. Key Insights from Exploratory Data Analysis</h2>
+
+        <div class="visualization-container">
+            <h3>Customer Demographics Overview</h3>
+            <div id="demographicsPlot" class="plot"></div>
+        </div>
+
+        <div class="insights-grid">
+            <div class="insight-card">
+                <h3>1.1 Customer Demographics</h3>
+                <ul>
+                    <li>Age Distribution Analysis</li>
+                    <li>Distinct Income Segments</li>
+                    <li>Geographic Distribution</li>
+                </ul>
+            </div>
+
+            <div class="insight-card">
+                <h3>1.2 Purchase Behavior Patterns</h3>
+                <ul>
+                    <li>Purchase Frequency Correlation</li>
+                    <li>Average Transaction Values</li>
+                    <li>Price Sensitivity Patterns</li>
+                </ul>
+            </div>
+
+            <div class="insight-card">
+                <h3>1.3 Customer Engagement Metrics</h3>
+                <ul>
+                    <li>Loyalty Program Impact</li>
+                    <li>Promotion Effectiveness</li>
+                    <li>Customer Segment Performance</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="predictive-models" class="content-section">
+        <h2>2. Predictive Model Insights</h2>
+
+        <div class="visualization-container">
+            <h3>Model Performance Metrics</h3>
+            <div id="modelPerformancePlot" class="plot"></div>
+        </div>
+
+        <div class="model-insights-grid">
+            <div class="model-card">
+                <h3>2.1 Purchase Behavior Predictions</h3>
+                <ul>
+                    <li>Income Level Significance</li>
+                    <li>Age-based Patterns</li>
+                    <li>Educational Background Influence</li>
+                </ul>
+            </div>
+
+            <div class="model-card">
+                <h3>2.2 Model Performance</h3>
+                <ul>
+                    <li>Accuracy Metrics</li>
+                    <li>Segment Reliability</li>
+                    <li>Strong Predictive Areas</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="recommendations" class="content-section">
+        <h2>3. Strategic Recommendations</h2>
+
+        <div class="recommendations-grid">
+            <div class="recommendation-card">
+                <h3>3.1 Immediate Actions</h3>
+                <ul>
+                    <li>Loyalty Program Enhancement</li>
+                    <li>Targeted Marketing Initiatives</li>
+                    <li>Product Category Optimization</li>
+                </ul>
+            </div>
+
+            <div class="recommendation-card">
+                <h3>3.2 Long-term Initiatives</h3>
+                <ul>
+                    <li>Customer Experience Enhancement</li>
+                    <li>Market Expansion Opportunities</li>
+                    <li>Data-Driven Decision Making</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="timeline" class="content-section">
+        <h2>4. Implementation Timeline</h2>
+        <div class="timeline-container">
+            <div id="timelinePlot" class="plot"></div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <p>© 2024 E-commerce Analysis Report</p>
+</footer>
+
+<script src="assets/ab.js"></script>
+</body>
+</html>

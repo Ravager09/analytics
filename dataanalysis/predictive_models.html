@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="assets/bc.css">
+  <title>Predictive Models</title>
+</head>
+<body>
+<header>
+  <h1>Predictive Models Used in Implementation</h1>
+</header>
+<main>
+  <p>This page discusses the various predictive models employed in the implementation.</p>
+  <h2>Logistic Regression</h2>
+  <p>Overview
+    Logistic regression is a statistical method used for binary classification tasks. It predicts the probability that a given input point belongs to a certain class, which, in this case, is whether a customer will use a promotion (1) or not (0).
+
+    How It Works
+    Model Equation: The core of logistic regression is the logistic function (also known as the sigmoid function), which maps any real-valued number into the (0, 1) interval. The output of the logistic function represents the probability that a given instance belongs to the positive class.
+
+    sigmoid
+    (
+    𝑧
+    )
+    =
+    1
+    1
+    +
+    𝑒
+    −
+    𝑧
+    sigmoid(z)=
+    1+e
+    −z
+
+    1
+    ​
+
+    where
+    𝑧
+    z is the linear combination of input features:
+
+    𝑧
+    =
+    𝑋
+    ⋅
+    𝑊
+    +
+    𝑏
+    z=X⋅W+b
+    Here,
+    𝑋
+    X represents the feature matrix,
+    𝑊
+    W is the weight vector, and
+    𝑏
+    b is the bias.
+
+    Training the Model: The model is trained using a method called gradient descent. The algorithm iteratively adjusts the weights and bias to minimize the difference between the predicted probabilities and the actual labels (0 or 1).
+
+    The weights are updated based on the gradient of the loss function, which in this case is derived from the logistic loss (also known as binary cross-entropy loss).
+    Implementation Steps in the Code
+    Data Preparation: The data is first loaded and cleaned. Missing values are dropped, and categorical variables (like loyalty status and gender) are one-hot encoded to convert them into a numerical format that can be used by the logistic regression model.
+
+    Feature Selection: The code selects relevant features for training the model, which include numerical columns such as age and satisfaction score, along with the encoded categorical variables.
+
+    Training the Model: An instance of the CustomLogisticRegression class is created and fitted to the training data using the fit method, which implements the gradient descent algorithm.
+
+    Making Predictions: The model uses the predict method to generate predictions for the test set based on the learned weights and bias.</p>
+  <h2>Evaluation Metrics</h2>
+  <p>Once the model is trained, its performance is evaluated using several metrics:
+
+    Accuracy: The ratio of correctly predicted instances (both true positives and true negatives) to the total instances.
+
+    Precision: This measures the accuracy of positive predictions. It is the ratio of true positives to the sum of true positives and false positives.
+
+    Recall: Also known as sensitivity, it measures the model's ability to identify all relevant instances. It is the ratio of true positives to the sum of true positives and false negatives.
+
+    F1 Score: The harmonic mean of precision and recall, providing a balance between the two metrics.
+
+    Confusion Matrix: A table that outlines the performance of the classification model by showing true positives, true negatives, false positives, and false negatives. </p>
+  <h3>Feature Importance</h3>
+<p>The model also includes a step to identify the top three factors contributing to the prediction of promotion usage. The importance of features is determined by the absolute values of the learned weights, where larger weights indicate a stronger influence on the output. </p>
+</main>
+<footer>
+  <p>&copy; 2024 Your Name</p>
+</footer>
+</body>
+</html>
